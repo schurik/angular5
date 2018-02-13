@@ -3,10 +3,8 @@
   <a class="navbar-brand" href="#">Angular Notes</a>
 </nav>
 <div class="container-fluid text-center pb-5">
-  <div style="text-align:center">
-    <h1>
-      Welcome to {{title}}!
-    </h1>
-    <app-card-list [cards]="cards"></app-card-list>
+  <div class="row justify-content-end">
+    <app-new-card-input (addCardEvent)="addCard($event)"></app-new-card-input>
   </div>
 </div>
+<app-card-list [cards]="cards"></app-card-list>
